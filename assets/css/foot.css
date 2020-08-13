@@ -15,47 +15,72 @@
 .footerIn>a{
     margin: 0 20px;
 }
-.footerIn>a:nth-child(1){
+.musicPre{
     background: url(../img/player.png) no-repeat  0 -30px;
     width: 19px;
     height: 20px;
 }
-.footerIn>a:nth-child(2){
+.musicPlay{
     background: url(../img/player.png) no-repeat  0 0px;
     width: 21px;
     height: 29px;
 }
-.footerIn>a:nth-child(3){
+.musicNext{
     background: url(../img/player.png) no-repeat  0 -52px;
     width: 19px;
     height: 20px;
 }
-.footerIn>a:nth-child(4){
+.musicMode{
     background: url(../img/player.png) no-repeat  0 -205px;
     width: 26px;
     height: 25px;
 }
-.footerIn>a:nth-child(5){
+.musicMode2{
+    width: 23px;
+    height: 20px;
+    background: url(../img/player.png) no-repeat  0 -260px;
+}
+.musicMode3{
+    width: 25px;
+    height: 19px;
+    background: url(../img/player.png) no-repeat  0 -74px;
+}
+.musicMode4{
+    width: 26px;
+    height: 25px;
+    background: url(../img/player.png) no-repeat  0 -232px;
+}
+
+.musicFav{
     background: url(../img/player.png) no-repeat  0 -96px;
     width: 24px;
     height: 21px;
 }
-.footerIn>a:nth-child(6){
+.musicFav2{
+    background: url(../img/player.png) no-repeat  -30px -96px;
+    width: 24px;
+    height: 21px;
+}
+.musicDown{
     background: url(../img/player.png) no-repeat  0 -120px;
     width: 22px;
     height: 21px;
 }
-.footerIn>a:nth-child(7){
+.musicComment{
     background: url(../img/player.png) no-repeat  0 -400px;
     width: 24px;
     height: 24px;
 }
-.footerIn>a:nth-child(8){
+.musicOnly{
     background: url(../img/player.png) no-repeat  0 -281px;
     width: 74px;
     height: 27px;
 }
-
+.musicOnlyed{
+    background: url(../img/player.png) no-repeat  0 -310px;
+    width: 74px;
+    height: 27px;
+}
 
 .musicProgressInfo{
     width: 550px;

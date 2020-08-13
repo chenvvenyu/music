@@ -10,8 +10,17 @@ $(function(){
         $(this).find(".listMenu").stop().fadeOut(100);
         $(this).find(".listTime div").stop().fadeOut(0);
         $(this).find(".listTime span").stop().fadeIn(100);
-    })
+    }),
     $(".listCheck").click(function(){
         $(this).toggleClass("listChecked")
+    }),
+    $(".musicOnly").click(function(){
+        $(this).toggleClass("musicOnlyed")
+    }),
+    $(".musicMode").click(function(){
+        $(this).toggleClass("musicMode2 musicMode3 musicMode4 musicMode5 musicMode6 musicMode7 musicMode8")
+    }),
+    $(".musicFav").click(function(){
+        $(this).toggleClass("musicFav2")
     })
 })
