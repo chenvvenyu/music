@@ -1,0 +1,132 @@
+/* fonter */
+.footer{
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    bottom:0;
+}
+.footerIn{
+    width: 1200px;
+    height: 60px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+.footerIn>a{
+    margin: 0 20px;
+}
+.footerIn>a:nth-child(1){
+    background: url(../img/player.png) no-repeat  0 -30px;
+    width: 19px;
+    height: 20px;
+}
+.footerIn>a:nth-child(2){
+    background: url(../img/player.png) no-repeat  0 0px;
+    width: 21px;
+    height: 29px;
+}
+.footerIn>a:nth-child(3){
+    background: url(../img/player.png) no-repeat  0 -52px;
+    width: 19px;
+    height: 20px;
+}
+.footerIn>a:nth-child(4){
+    background: url(../img/player.png) no-repeat  0 -205px;
+    width: 26px;
+    height: 25px;
+}
+.footerIn>a:nth-child(5){
+    background: url(../img/player.png) no-repeat  0 -96px;
+    width: 24px;
+    height: 21px;
+}
+.footerIn>a:nth-child(6){
+    background: url(../img/player.png) no-repeat  0 -120px;
+    width: 22px;
+    height: 21px;
+}
+.footerIn>a:nth-child(7){
+    background: url(../img/player.png) no-repeat  0 -400px;
+    width: 24px;
+    height: 24px;
+}
+.footerIn>a:nth-child(8){
+    background: url(../img/player.png) no-repeat  0 -281px;
+    width: 74px;
+    height: 27px;
+}
+
+
+.musicProgressInfo{
+    width: 550px;
+    height: 40px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.musicProgressInfoTop{
+    width: 100%;
+    height: 20px;
+}
+.musicProgressInfoTop>span{
+    font-size: 14px;
+    color: #ffffff;
+    opacity: 0.5;
+}
+.musicProgressName:hover{
+    opacity: 1;
+}
+.musicProgressInfoTop{
+    display: flex;
+    justify-content: space-between;
+}
+.musicProgressInfoBar{
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.5);
+}
+.musicProgressLine{
+    width: 100px;
+    height: 100%;
+    background-color: #fff;
+}
+.musicProgressDot{
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: relative;
+    bottom: 5px;
+    left: 100px;
+}
+
+.musicVoiceInfo{
+    width: 100px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+.musicVoiceIcon{
+    width: 26px;
+    height: 21px;
+    background: url(../img/player.png) no-repeat 0 -144px;
+}
+.musicVoiceInfoBar{
+    margin-left: 5px;
+    width: 70px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.5);
+}
+.musicVoiceLine{
+    width: 50px;
+    height: 100%;
+    background-color: #fff;
+}
+.musicVoiceDot{
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: relative;
+    bottom: 5px;
+    left: 50px;
+}

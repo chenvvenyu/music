@@ -1,0 +1,212 @@
+/* content */
+.content{
+    width: 100%;
+    height: 460px;
+}
+.contentIn{
+    width: 1200px;
+    height: 460px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+.contenLeft{
+    width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.contenToolbar{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    width: 17%;
+    height: 80%;
+    opacity: 0.5;
+    margin:0 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #ffffff;
+}
+.title{
+    color: #ffffff;
+    margin-top: 5px;
+}
+.img{
+    height: 20px;
+    width: 20px;
+    margin-top: 5px;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+}
+.box:hover{
+    opacity: 1;
+}
+.box:nth-child(1) .img{
+    background-image: url(../img/shoucang.png);
+}
+.box:nth-child(2) .img{
+    background-image: url(../img/tianjia.png);
+}
+.box:nth-child(3) .img{
+    background-image: url(../img/yunxiazai.png);
+}
+.box:nth-child(4) .img{
+    background-image: url(../img/lajitong.png);
+}
+.box:nth-child(5) .img{
+    background-image: url(../img/qingkongbeifen.png);
+}
+.box div{
+    height: 30px;
+}
+/* contenList */
+.contenList{
+    width: 100%;
+    height: 400px;
+    margin-top:-16px;
+    overflow: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+}
+.contenList::-webkit-scrollbar {
+    /*滚动条整体样式*/
+    width : 8px;  /*高宽分别对应横竖滚动条的尺寸*/
+    height: 1px;
+}
+.contenList::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.4);
+}
+.contenList::-webkit-scrollbar-track {
+    /*滚动条里面轨道*/
+    border-radius: 10px;
+}
+.listTitle{
+    position: sticky;
+    top:0;
+    z-index: 100;
+    background-color: #8fd1eb;
+    border-bottom: 1px solid rgba(255, 255, 255, 1);
+}
+.listMusic{
+    opacity: 0.5;
+}
+.contenList>ul>li{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.contenList>ul>li:hover{
+    opacity: 1;
+}
+.contenList li>div{
+    color: #ffffff;
+    display: flex;
+}
+.listCheck>span{
+    display: block;
+    width: 14px;
+    height: 14px;
+    border: 2px solid #ffffff;
+}
+.listCheck{
+    width: 50px;
+}
+.listChecked>span{
+    background-image: url(../img/打勾.png);
+    background-size: 14px 14px;
+}
+.listNumber{
+    width: 20px;
+}
+.listName{
+    width: 50%;
+}
+.listsinger{
+    width: 20%;
+}
+.listTime{
+    width: 20%;
+}
+.listMenu{
+    position: relative;
+    left: 150px;
+    display: none;
+}
+.listMenu>div{
+    float: left;
+    width: 21px;
+    height: 21px;
+    margin-left: 20px;
+    background-size: 21px 21px;
+}
+.listTime>div{
+    position: relative;
+    width: 21px;
+    height: 21px;
+    background-size: 21px 21px;
+    background-image: url(../img/lajitong.png);
+    display: none;
+}
+.listMenu>div:nth-child(1){
+    background-image: url(../img/bofang.png);
+}
+.listMenu>div:nth-child(2){
+    background-image: url(../img/tianjia.png);
+}
+.listMenu>div:nth-child(3){
+    background-image: url(../img/yunxiazai.png);
+}
+.listMenu>div:nth-child(4){
+    background-image: url(../img/fenxiang.png);
+}
+/* constenRight */
+.contenRight{
+    width: 300px;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+.songInfo{
+    width: 200px;
+    height: 200px;
+    background-image: url(../img/album_cover_player.png);
+    background-size: 200px 200px;
+    background-repeat: no-repeat;
+}
+.songInfo>div{
+    margin-top: 10px;
+    width: 180px;
+    height: 190px;
+    background-color: royalblue;
+}
+.songContent{
+    margin-top: 20px;
+    height: 20%;
+    background-size: 100% 100%;
+}
+.songContent span{
+    font-size: 14px;
+    color: #ffffff;
+    opacity: 0.5;
+}
+.songNameCon:hover,.singerCon:hover,.songAblumCon:hover{
+    opacity: 1;
+}
+.songLyric{
+    height: 10%; 
+    margin-top: 10px;
+}
+.songLyric>div{
+    font-size: 14px;
+    color: #ffffff;
+    opacity: 0.5;
+}
