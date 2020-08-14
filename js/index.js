@@ -58,6 +58,7 @@ $(function(){
         $(".songNameCon").html(music.name);
         $(".singerCon").html(music.singer);
         $(".songAblumCon").html(music.album);
-        $(".songInfoImg").attr('src',music.cover)
+        $(".songInfoImg").attr('src',music.cover);
+        $(".maskBg").css("background-image","url(" +music.cover+ ")");
     }
 })
