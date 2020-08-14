@@ -97,13 +97,16 @@
 .listMusic{
     opacity: 0.5;
 }
+.listMusiced{
+    opacity: 1 !important;
+}
 .contenList>ul>li{
     height: 50px;
     width: 100%;
     display: flex;
     align-items: center;
 }
-.contenList>ul>li:hover{
+.listMusic:hover{
     opacity: 1;
 }
 .contenList li>div{
@@ -126,8 +129,14 @@
 .listNumber{
     width: 20px;
 }
+.listNumbered{
+    color:transparent !important;
+    background: url(../img/wave.gif) no-repeat 0 center;
+}
 .listName{
     width: 50%;
+    display: flex;
+    justify-content: space-between;
 }
 .listsinger{
     width: 20%;
@@ -136,8 +145,7 @@
     width: 20%;
 }
 .listMenu{
-    position: relative;
-    left: 150px;
+    margin-right: 20px;
     display: none;
 }
 .listMenu>div{
@@ -154,18 +162,33 @@
     background-size: 21px 21px;
     background-image: url(../img/lajitong.png);
     display: none;
+    opacity: 0.5;
 }
-.listMenu>div:nth-child(1){
+.listTime>div:hover{
+    opacity: 1;
+}
+.listMenuPlay{
     background-image: url(../img/bofang.png);
+    opacity: 0.5;
+}
+.listMenuPlayed{
+    background-image: url(../img/暂停.png);
+    opacity: 1 ;
 }
 .listMenu>div:nth-child(2){
     background-image: url(../img/tianjia.png);
+    opacity: 0.5;
 }
 .listMenu>div:nth-child(3){
     background-image: url(../img/yunxiazai.png);
+    opacity: 0.5;
 }
 .listMenu>div:nth-child(4){
     background-image: url(../img/fenxiang.png);
+    opacity: 0.5;
+}
+.listMenu>div:hover{
+    opacity: 1;
 }
 /* constenRight */
 .contenRight{

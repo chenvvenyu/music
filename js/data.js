@@ -1,15 +1,18 @@
 $(function () {
     getPlayerList();
+    var $audio=$("audio");
+    var player=new Player($audio)
     jQuery.support.cors = true;
     function getPlayerList() {
         $.ajax({
             url: "./source/musiclist.json",
             dataType: "json",
             success: function (data) {
-                console.log(data)
+                console.log(data);
+                player.musicList=data;
+                var $musicList = $(".contenList ul");
                 $.each(data, function (index, ele) {
                     var $item = crateMusicItem(index, ele); 
-                    var $musicList = $(".contenList ul");
                     $musicList.append($item);
                 });
             },
@@ -26,7 +29,7 @@ $(function () {
                            ' <div class="listNumber">'+num+'</div>'+
                             '<div class="listName">'+music.name+
                                ' <div class="listMenu">'+
-                                   ' <div></div>'+
+                                   ' <div class="listMenuPlay"></div>'+
                                    ' <div></div>'+
                                   '  <div></div>'+
                                    ' <div></div>'+
@@ -38,6 +41,8 @@ $(function () {
                                 '<div></div>'+
                            ' </div>'+
                         '</li>');
+        $item.get(0).index=index;
+        $item.get(0).music=music;
         return $item;
     }
 })

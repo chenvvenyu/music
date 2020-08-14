@@ -19,16 +19,23 @@
     background: url(../img/player.png) no-repeat  0 -30px;
     width: 19px;
     height: 20px;
+    opacity: 0.5;
 }
 .musicPlay{
     background: url(../img/player.png) no-repeat  0 0px;
     width: 21px;
     height: 29px;
+    opacity: 0.5;
+}
+.musicPlayed{
+    background: url(../img/player.png) no-repeat -30px 0 !important;
+    opacity: 1;
 }
 .musicNext{
     background: url(../img/player.png) no-repeat  0 -52px;
     width: 19px;
     height: 20px;
+    opacity: 0.5;
 }
 .musicMode{
     background: url(../img/player.png) no-repeat  0 -205px;
