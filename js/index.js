@@ -41,6 +41,7 @@ $(function(){
         }
         //播放
         player.playMusic( $item.get(0).index,$item.get(0).music);
+        footMusic( $item.get(0).index,$item.get(0).music)
     })
     $(".musicOnly").click(function(){
         $(this).toggleClass("musicOnlyed")
@@ -51,4 +52,12 @@ $(function(){
     $(".musicFav").click(function(){
         $(this).toggleClass("musicFav2")
     })
+
+    function footMusic(index,music){
+        $(".musicProgressName").html(music.name+'/'+music.singer);
+        $(".songNameCon").html(music.name);
+        $(".singerCon").html(music.singer);
+        $(".songAblumCon").html(music.album);
+        $(".songInfoImg").attr('src',music.cover)
+    }
 })

@@ -43,6 +43,7 @@ $(function () {
                         '</li>');
         $item.get(0).index=index;
         $item.get(0).music=music;
+        console.log($item)
         return $item;
     }
 })

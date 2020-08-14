@@ -201,15 +201,25 @@
 .songInfo{
     width: 200px;
     height: 200px;
-    background-image: url(../img/album_cover_player.png);
-    background-size: 200px 200px;
-    background-repeat: no-repeat;
+    position: relative;
 }
 .songInfo>div{
     margin-top: 10px;
     width: 180px;
     height: 190px;
-    background-color: royalblue;
+}
+.songInfoBg{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1000;
+}
+.songInfoImg{
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+    position: absolute;
+    z-index: 999;
 }
 .songContent{
     margin-top: 20px;
