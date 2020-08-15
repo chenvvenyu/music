@@ -20,7 +20,7 @@ $(function(){
         $(this).parents(".listMusic").toggleClass("listMusiced");
     });
     //监听列表播放
-    var $musicPlay =$(".musicPlay");
+    var $musicPlay =$(".footMusicPlay");
     $(".contenList").delegate(".listMenuPlay","click",function(){
         var $item =$(this).parents(".listMusic")
         
@@ -42,7 +42,23 @@ $(function(){
         //播放
         player.playMusic( $item.get(0).index,$item.get(0).music);
         footMusic( $item.get(0).index,$item.get(0).music)
+    });
+
+    $(".musicPre").click(function(){
+        $(".listMusic").eq(player.proIndex()).find(".listMenuPlay").trigger("click");
     })
+    $(".footMusicPlay").click(function(){
+        if(player.currentIndex ==- 1){
+            $(".listMusic").eq(0).find(".listMenuPlay").trigger("click");
+        }else{
+            $(".listMusic").eq(player.currentIndex).find(".listMenuPlay").trigger("click");
+        }
+    })
+    $(".musicNext").click(function(){
+        console.log(player.musicList)
+        $(".listMusic").eq(player.currentIndex+1).find(".listMenuPlay").trigger("click");
+    })
+
     $(".musicOnly").click(function(){
         $(this).toggleClass("musicOnlyed")
     }),

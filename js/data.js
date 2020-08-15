@@ -8,8 +8,8 @@ $(function () {
             url: "./source/musiclist.json",
             dataType: "json",
             success: function (data) {
-                console.log(data);
                 player.musicList=data;
+                console.log(player.musicList)
                 var $musicList = $(".contenList ul");
                 $.each(data, function (index, ele) {
                     var $item = crateMusicItem(index, ele); 
@@ -22,8 +22,7 @@ $(function () {
         })
     }
     function crateMusicItem(index, music) {
-        var num =index+1
-        console.log(num)
+        var num =index+1;
         var $item = $('<li class="listMusic">'+
                            ' <div class="listCheck"><span></span></div>'+
                            ' <div class="listNumber">'+num+'</div>'+
@@ -43,7 +42,6 @@ $(function () {
                         '</li>');
         $item.get(0).index=index;
         $item.get(0).music=music;
-        console.log($item)
         return $item;
     }
 })
