@@ -14,6 +14,7 @@ body,html{
     height: 45px;
     display: flex;
     justify-content: space-between;
+    user-select: none;
 }
 .logo,.register>li{
     color: #ffffff;

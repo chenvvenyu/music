@@ -10,6 +10,7 @@
     display: flex;
     justify-content: space-between;
     align-items: stretch;
+    user-select: none;
 }
 .contenLeft{
     width: 800px;
@@ -155,16 +156,13 @@
     margin-left: 20px;
     background-size: 21px 21px;
 }
-.listTime>div{
+.listOut{
     position: relative;
     width: 21px;
     height: 21px;
     background-size: 21px 21px;
     background-image: url(../img/lajitong.png);
     display: none;
-    opacity: 0.5;
-}
-.listTime>div:hover{
     opacity: 1;
 }
 .listMenuPlay{

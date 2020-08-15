@@ -39,6 +39,9 @@
                 index=0;
             }
             return index;
+        },
+        changeMusic:function(index){
+            this.musicList.splice(index,1);
         }
     }
     Player.prototype.init.prototype =Player.prototype;

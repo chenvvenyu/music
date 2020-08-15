@@ -37,7 +37,7 @@ $(function () {
                           '  <div class="listsinger">'+music.singer+'</div>'+
                             '<div class="listTime">'+
                                 '<span>'+music.time+'</span> '+
-                                '<div></div>'+
+                                '<div class="listOut"></div>'+
                            ' </div>'+
                         '</li>');
         $item.get(0).index=index;

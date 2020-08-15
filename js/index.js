@@ -2,6 +2,13 @@ $(function(){
     // 1.监听歌曲的
     var $audio=$("audio");
     var player=new Player($audio);
+    var $progressBar =$(".musicProgressInfoBar");
+    var $progressLine=$(".musicProgressLine");
+    var $progressDot =$(".musicProgressDot");
+    var progress =new Progress($progressBar,$progressLine,$progressDot);
+    progress.progressClick();
+    progress.progressMove();
+
     $(".contenList").delegate(".listMusic","mouseenter",function(){
         //进入
         $(this).find(".listMenu").stop().fadeIn(100);
@@ -28,7 +35,7 @@ $(function(){
         $(this).toggleClass("listMenuPlayed");
         $item.find(".listNumber").toggleClass("listNumbered");
         $item.toggleClass("listMusiced");
-        // 
+
         //选中后取消渲染
         $item.siblings().find(".listMenuPlay").removeClass("listMenuPlayed");
         $item.siblings().find(".listNumber").removeClass("listNumbered");
@@ -43,7 +50,17 @@ $(function(){
         player.playMusic( $item.get(0).index,$item.get(0).music);
         footMusic( $item.get(0).index,$item.get(0).music)
     });
-
+    //删除
+    $(".contenList").delegate(".listOut","click",function(){
+        var $item =$(this).parents(".listMusic");
+        $item.remove();
+        player.changeMusic($item.get(0).index);
+        $(".listMusic").each(function(index,ele){
+            ele.index =index;
+            $(ele).find(".listNumber").text(index+1);
+        })
+    })
+    //底部按钮
     $(".musicPre").click(function(){
         $(".listMusic").eq(player.proIndex()).find(".listMenuPlay").trigger("click");
     })
@@ -58,6 +75,8 @@ $(function(){
         console.log(player.musicList)
         $(".listMusic").eq(player.currentIndex+1).find(".listMenuPlay").trigger("click");
     })
+    
+    // 底部进度条
 
     $(".musicOnly").click(function(){
         $(this).toggleClass("musicOnlyed")
@@ -71,6 +90,7 @@ $(function(){
 
     function footMusic(index,music){
         $(".musicProgressName").html(music.name+'/'+music.singer);
+        $(".time").html(music.time)
         $(".songNameCon").html(music.name);
         $(".singerCon").html(music.singer);
         $(".songAblumCon").html(music.album);
