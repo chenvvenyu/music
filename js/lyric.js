@@ -25,7 +25,9 @@
             })
         },
         parseLyric:function(data){
-            $this=this;
+            var $this=this;
+            $this.times=[];
+            $this.lyrice=[];
             var array =data.split("\n");
             var timeReg = /\[(\d*:\d*\.\d*)\]/
             $.each(array,function(index,ele){

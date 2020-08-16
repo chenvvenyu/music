@@ -96,7 +96,8 @@ $(function(){
             }
             //播放
             player.playMusic( $item.get(0).index,$item.get(0).music);
-            footMusic( $item.get(0).index,$item.get(0).music)
+            footMusic( $item.get(0).index,$item.get(0).music);
+            initMusicLyric($item.get(0).music);
         });
     
         //删除
@@ -206,7 +207,8 @@ $(function(){
     }
     function initMusicLyric(music){
         lyric =new Lyric(music.link_lrc);
-        var $lryicContainer=$(".songLyric")
+        var $lryicContainer=$(".songLyric");
+        $lryicContainer.html("")
         lyric.loadLyric(function(){
             $.each(lyric.lyrice,function(index,ele){
                 var $item=$("<li>"+ele+"</li>");
