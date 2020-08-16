@@ -87,6 +87,14 @@ $(function(){
     $(".musicFav").click(function(){
         $(this).toggleClass("musicFav2")
     })
+    
+    //监听音乐进度
+    player.musicTimeUpdate(function(duration,currentTime,time){
+        $(".nowTime").html(time)
+        //监听进度条进度
+        var value =currentTime/duration*100;
+        progress.setProgress(value)
+    })
 
     function footMusic(index,music){
         $(".musicProgressName").html(music.name+'/'+music.singer);
