@@ -146,6 +146,10 @@
     height: 21px;
     background: url(../img/player.png) no-repeat 0 -144px;
 }
+.musicVoiceIconed{
+    background: url(../img/player.png) no-repeat 0 -182px !important;
+
+}
 .musicVoiceInfoBar{
     margin-left: 5px;
     width: 70px;
@@ -153,7 +157,7 @@
     background: rgba(255, 255, 255, 0.5);
 }
 .musicVoiceLine{
-    width: 50px;
+    width: 70px;
     height: 100%;
     background-color: #fff;
 }
@@ -164,5 +168,5 @@
     background-color: #fff;
     position: relative;
     bottom: 5px;
-    left: 50px;
+    left: 70px;
 }

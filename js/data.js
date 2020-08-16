@@ -1,20 +1,23 @@
 $(function () {
-    getPlayerList();
+    
     var $audio=$("audio");
-    var player=new Player($audio)
+    var player=new Player($audio);
+    var lyric;
+
     jQuery.support.cors = true;
+    getPlayerList();
     function getPlayerList() {
         $.ajax({
             url: "./source/musiclist.json",
             dataType: "json",
             success: function (data) {
                 player.musicList=data;
-                console.log(player.musicList)
                 var $musicList = $(".contenList ul");
                 $.each(data, function (index, ele) {
                     var $item = crateMusicItem(index, ele); 
                     $musicList.append($item);
                 });
+                initMusicLyric(data[0]);
             },
             error: function (e) {
                 console.log(e)
@@ -43,5 +46,15 @@ $(function () {
         $item.get(0).index=index;
         $item.get(0).music=music;
         return $item;
+    }
+    function initMusicLyric(music){
+        lyric =new Lyric(music.link_lrc);
+        var $lryicContainer=$(".songLyric")
+        lyric.loadLyric(function(){
+            $.each(lyric.lyrice,function(index,ele){
+                var $item=$("<li>"+ele+"</li>");
+                $lryicContainer.append($item);
+            })
+        });
     }
 })

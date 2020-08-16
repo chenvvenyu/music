@@ -232,12 +232,18 @@
 .songNameCon:hover,.singerCon:hover,.songAblumCon:hover{
     opacity: 1;
 }
-.songLyric{
-    height: 10%; 
+.songLyricIn{
+    height: 11%; 
     margin-top: 10px;
+    overflow: hidden;
+    align-content: center;
 }
-.songLyric>div{
+.songLyric>li{
+    display: flex;
     font-size: 14px;
     color: #ffffff;
     opacity: 0.5;
+}
+.cur{
+    color:#31c27c !important;
 }

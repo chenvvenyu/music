@@ -10,6 +10,7 @@
             this.audio = $audio.get(0);
         },
         currentIndex: -1,
+        //播放按钮
         playMusic: function (index, music) {
             if (this.currentIndex == index) {
                 // 同首
@@ -25,6 +26,7 @@
                 this.currentIndex = index
             }
         },
+        //上一首
         proIndex: function () {
             var index = this.currentIndex - 1;
             if (index < 0) {
@@ -32,6 +34,7 @@
             }
             return index;
         },
+        //下一首
         nextIndex: function () {
             var index = this.currentIndex + 1;
             console.log(this.musicList.length);
@@ -40,9 +43,11 @@
             }
             return index;
         },
+        //删除
         changeMusic: function (index) {
             this.musicList.splice(index, 1);
         },
+        //处理进度条时间
         formatDate: function (currentTime, duration) {
             var startMin = parseInt(currentTime / 60);
             var startSec = parseInt(currentTime % 60);
@@ -54,6 +59,7 @@
             }
             return startMin + ":" + startSec + "/";
         },
+        //进度条时间绑定
         musicTimeUpdate: function (callBack) {
             var $this = this;
             this.$audio.on("timeupdate", function () {
@@ -63,6 +69,21 @@
                 $(".nowTime").html(timeStr);
                 callBack(duration,currentTime,timeStr)
             })
+        },
+        //进度条 加载音乐
+        musicSeekTo:function(value){
+            this.audio.currentTime=this.audio.duration*value;
+        },
+        //设置音量
+        musicVoiceSeelTo:function(value){
+            //0~1
+            if(value>1){
+                this.audio.volume=1;
+            }else if(value<0){
+                this.audio.volume=0;
+            }else{
+                this.audio.volume=value;
+            }
         }
     }
     Player.prototype.init.prototype = Player.prototype;
